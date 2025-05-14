@@ -8,7 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NewTest {
   @Test
-  public void f() {
+  public void f() throws InterruptedException {
 	
 	  WebDriverManager.chromedriver().setup();
 	    ChromeOptions options = new ChromeOptions();
@@ -16,6 +16,8 @@ public class NewTest {
 
 	ChromeDriver driver=new ChromeDriver(options);
 	driver.get("https://chatgpt.com/");
+	Thread.sleep(1000);
 	driver.close();
+	
   }
 }
